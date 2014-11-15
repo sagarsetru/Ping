@@ -120,8 +120,8 @@ class UsersTableViewController: UITableViewController, UsersDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as UITableViewCell
         let item = self.records[indexPath.row]
         
-        cell.textLabel?.text = item["text"] as? String
-        cell.textLabel?.textColor = UIColor.blackColor()
+        cell.textLabel.text = item["text"] as? String
+        cell.textLabel.textColor = UIColor.blackColor()
         
         return cell
     }

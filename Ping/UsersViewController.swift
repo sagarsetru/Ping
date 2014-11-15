@@ -45,7 +45,7 @@ class UsersViewController: UIViewController, UINavigationBarDelegate,  UIBarPosi
     {
         super.viewDidLoad()
         
-        self.firstBarButton.delegate = self
+        //self.firstBarButton.delegate = self
         self.text.delegate = self
         self.text.becomeFirstResponder()
     }
