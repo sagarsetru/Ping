@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let rootVC = ViewController()
-        window!.rootViewController = rootVC // force unwrap the UIWindow optional here because we know there's an actual value stored here (as oppose to nil)
+        var navController = UINavigationController(rootViewController:rootVC)
+        navController.setToolbarHidden(false, animated: false)
+        window!.rootViewController = navController // force unwrap the UIWindow optional here because we know there's an actual value stored here (as oppose to nil)
         window!.makeKeyAndVisible() // make window visible and the 'key' window (being the key window means that this window will gather all interaction data)
         
         return true
