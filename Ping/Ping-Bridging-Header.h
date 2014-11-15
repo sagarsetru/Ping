@@ -9,6 +9,7 @@
 #ifndef Ping_Ping_Bridging_Header_h
 #define Ping_Ping_Bridging_Header_h
 
-#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 
 #endif
+
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>

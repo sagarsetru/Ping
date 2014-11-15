@@ -9,9 +9,7 @@
 import UIKit
 import CoreLocation
 
-
-
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
 
@@ -43,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         locationManager.startUpdatingLocation()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations, locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             
@@ -93,6 +91,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     {
         println("Second Button Pushed!")
     }
+    
+    
     
     
 }
