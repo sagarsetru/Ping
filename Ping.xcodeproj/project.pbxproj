@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35CCECB61A17376200D8DFFC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB51A17376200D8DFFC /* AddressBook.framework */; };
-		35CCECB81A17376800D8DFFC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB71A17376800D8DFFC /* AddressBookUI.framework */; };
-		35CCECBA1A17378F00D8DFFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB91A17378F00D8DFFC /* CoreLocation.framework */; };
 		35E5E46F1A17191600E9A6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5E46E1A17191600E9A6DD /* AppDelegate.swift */; };
 		35E5E4711A17191600E9A6DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5E4701A17191600E9A6DD /* ViewController.swift */; };
 		35E5E4761A17191600E9A6DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E5E4751A17191600E9A6DD /* Images.xcassets */; };
@@ -20,7 +17,6 @@
 		6DD7AE951A17DE5000BBE22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD7AE941A17DE5000BBE22E /* Main.storyboard */; };
 		DF4F05F71A17D078005BC167 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4F05F51A17D078005BC167 /* WindowsAzureMessaging.framework */; };
 		DF4F05F81A17D078005BC167 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4F05F61A17D078005BC167 /* WindowsAzureMobileServices.framework */; };
-		DFA4C1461A17433C0064A93C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA4C1451A17433C0064A93C /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35CCECB51A17376200D8DFFC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		35CCECB71A17376800D8DFFC /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		35CCECB91A17378F00D8DFFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		35E5E4691A17191600E9A6DD /* Ping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E5E46D1A17191600E9A6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E5E46E1A17191600E9A6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +44,6 @@
 		6DD7AE941A17DE5000BBE22E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DF4F05F51A17D078005BC167 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMessaging.framework; path = Ping/WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		DF4F05F61A17D078005BC167 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMobileServices.framework; path = Ping/WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
-		DFA4C1451A17433C0064A93C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DFA4C14B1A1743740064A93C /* Ping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ping-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,11 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4F05F81A17D078005BC167 /* WindowsAzureMobileServices.framework in Frameworks */,
-				DFA4C1461A17433C0064A93C /* CoreMotion.framework in Frameworks */,
-				35CCECBA1A17378F00D8DFFC /* CoreLocation.framework in Frameworks */,
-				35CCECB81A17376800D8DFFC /* AddressBookUI.framework in Frameworks */,
 				DF4F05F71A17D078005BC167 /* WindowsAzureMessaging.framework in Frameworks */,
-				35CCECB61A17376200D8DFFC /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +72,6 @@
 			children = (
 				DF4F05F51A17D078005BC167 /* WindowsAzureMessaging.framework */,
 				DF4F05F61A17D078005BC167 /* WindowsAzureMobileServices.framework */,
-				DFA4C1451A17433C0064A93C /* CoreMotion.framework */,
-				35CCECB91A17378F00D8DFFC /* CoreLocation.framework */,
-				35CCECB71A17376800D8DFFC /* AddressBookUI.framework */,
-				35CCECB51A17376200D8DFFC /* AddressBook.framework */,
 				35E5E46B1A17191600E9A6DD /* Ping */,
 				35E5E4811A17191600E9A6DD /* PingTests */,
 				35E5E46A1A17191600E9A6DD /* Products */,

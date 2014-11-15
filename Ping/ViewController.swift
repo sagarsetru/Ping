@@ -8,10 +8,13 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
+    
+    @IBOutlet var mapView: MKMapView?
 
     @IBOutlet var addButton: UIBarButtonItem?
     
