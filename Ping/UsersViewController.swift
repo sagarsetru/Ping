@@ -36,7 +36,7 @@ protocol UsersDelegate {
 
 class UsersViewController: UIViewController, UINavigationBarDelegate,  UIBarPositioningDelegate, UITextFieldDelegate {
     
-    @IBOutlet var NavBar : UINavigationBar!
+    @IBOutlet var firstBarButton : UIBarButtonItem!
     @IBOutlet var text : UITextField!
     
     var delegate : UsersDelegate?
@@ -45,7 +45,7 @@ class UsersViewController: UIViewController, UINavigationBarDelegate,  UIBarPosi
     {
         super.viewDidLoad()
         
-        self.NavBar.delegate = self
+        self.firstBarButton.delegate = self
         self.text.delegate = self
         self.text.becomeFirstResponder()
     }
