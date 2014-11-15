@@ -7,14 +7,18 @@
 //
 
 import UIKit
+//import WindowsAzureMobileServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var client: MSClient?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+//        self.client = MSClient(clientWithApplicationURLString:"https://pingping.azure-mobile.net/", applicationKey:"ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        self.client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
