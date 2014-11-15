@@ -26,9 +26,9 @@
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>magnetometer</string>
+		<string>gps</string>
 		<string>armv7</string>
-                <string>magnetometer</string>
-                <string>gps</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
