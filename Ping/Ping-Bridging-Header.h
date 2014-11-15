@@ -13,3 +13,4 @@
 #endif
 
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+#import "APAddressBook-Bridging.h"
