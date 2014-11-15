@@ -17,6 +17,7 @@
 		35E5E4851A17191600E9A6DD /* PingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5E4841A17191600E9A6DD /* PingTests.swift */; };
 		35ED80431A1751E400040061 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED80411A1751E400040061 /* UsersTableViewController.swift */; };
 		35ED80441A1751E400040061 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED80421A1751E400040061 /* UsersViewController.swift */; };
+		6DD7AE951A17DE5000BBE22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD7AE941A17DE5000BBE22E /* Main.storyboard */; };
 		DF4F05F71A17D078005BC167 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4F05F51A17D078005BC167 /* WindowsAzureMessaging.framework */; };
 		DF4F05F81A17D078005BC167 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4F05F61A17D078005BC167 /* WindowsAzureMobileServices.framework */; };
 		DFA4C1461A17433C0064A93C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA4C1451A17433C0064A93C /* CoreMotion.framework */; };
@@ -47,6 +48,7 @@
 		35E5E4841A17191600E9A6DD /* PingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTests.swift; sourceTree = "<group>"; };
 		35ED80411A1751E400040061 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		35ED80421A1751E400040061 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		6DD7AE941A17DE5000BBE22E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DF4F05F51A17D078005BC167 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMessaging.framework; path = Ping/WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		DF4F05F61A17D078005BC167 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMobileServices.framework; path = Ping/WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		DFA4C1451A17433C0064A93C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -108,6 +110,7 @@
 				35ED80421A1751E400040061 /* UsersViewController.swift */,
 				35E5E46E1A17191600E9A6DD /* AppDelegate.swift */,
 				35E5E4701A17191600E9A6DD /* ViewController.swift */,
+				6DD7AE941A17DE5000BBE22E /* Main.storyboard */,
 				35E5E4751A17191600E9A6DD /* Images.xcassets */,
 				35E5E4771A17191600E9A6DD /* LaunchScreen.xib */,
 				35E5E46C1A17191600E9A6DD /* Supporting Files */,
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD7AE951A17DE5000BBE22E /* Main.storyboard in Resources */,
 				35E5E4791A17191600E9A6DD /* LaunchScreen.xib in Resources */,
 				35E5E4761A17191600E9A6DD /* Images.xcassets in Resources */,
 			);
