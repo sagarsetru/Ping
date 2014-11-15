@@ -15,6 +15,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var addButton: UIBarButtonItem?
     
+    @IBOutlet var GPSButton: UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //This is where we would add a person!
     }
     
-    @IBAction func findMyLocation(sender: AnyObject) {
+    @IBAction func findMyLocation(sender: UIButton) {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()

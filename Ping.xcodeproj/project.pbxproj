@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355A0DC91A17F50C002CCF21 /* RequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A0DC81A17F50C002CCF21 /* RequestsTableViewController.swift */; };
+		355A0DCB1A17F545002CCF21 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A0DCA1A17F545002CCF21 /* RequestsViewController.swift */; };
 		35CCECB61A17376200D8DFFC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB51A17376200D8DFFC /* AddressBook.framework */; };
 		35CCECB81A17376800D8DFFC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB71A17376800D8DFFC /* AddressBookUI.framework */; };
 		35CCECBA1A17378F00D8DFFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCECB91A17378F00D8DFFC /* CoreLocation.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		355A0DC81A17F50C002CCF21 /* RequestsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsTableViewController.swift; sourceTree = "<group>"; };
+		355A0DCA1A17F545002CCF21 /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
 		35CCECB51A17376200D8DFFC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		35CCECB71A17376800D8DFFC /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		35CCECB91A17378F00D8DFFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -106,7 +110,9 @@
 		35E5E46B1A17191600E9A6DD /* Ping */ = {
 			isa = PBXGroup;
 			children = (
+				355A0DC81A17F50C002CCF21 /* RequestsTableViewController.swift */,
 				35ED80411A1751E400040061 /* UsersTableViewController.swift */,
+				355A0DCA1A17F545002CCF21 /* RequestsViewController.swift */,
 				35ED80421A1751E400040061 /* UsersViewController.swift */,
 				35E5E46E1A17191600E9A6DD /* AppDelegate.swift */,
 				35E5E4701A17191600E9A6DD /* ViewController.swift */,
@@ -246,9 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355A0DC91A17F50C002CCF21 /* RequestsTableViewController.swift in Sources */,
 				35E5E4711A17191600E9A6DD /* ViewController.swift in Sources */,
 				35ED80441A1751E400040061 /* UsersViewController.swift in Sources */,
 				35E5E46F1A17191600E9A6DD /* AppDelegate.swift in Sources */,
+				355A0DCB1A17F545002CCF21 /* RequestsViewController.swift in Sources */,
 				35ED80431A1751E400040061 /* UsersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
