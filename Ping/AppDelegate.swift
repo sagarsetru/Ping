@@ -12,12 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-<<<<<<< Updated upstream
     
-=======
-    var client = MSClient?
-
->>>>>>> Stashed changes
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         

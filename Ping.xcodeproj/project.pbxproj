@@ -15,9 +15,6 @@
 		35E5E4761A17191600E9A6DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E5E4751A17191600E9A6DD /* Images.xcassets */; };
 		35E5E4791A17191600E9A6DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E5E4771A17191600E9A6DD /* LaunchScreen.xib */; };
 		35E5E4851A17191600E9A6DD /* PingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E5E4841A17191600E9A6DD /* PingTests.swift */; };
-		DF29FCBB1A1723C00071B43A /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF29FCB91A1723C00071B43A /* WindowsAzureMessaging.framework */; };
-		DF29FCBC1A1723C00071B43A /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF29FCBA1A1723C00071B43A /* WindowsAzureMobileServices.framework */; };
-		DF77E10E1A17307900948ED6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF77E10D1A17307900948ED6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +40,6 @@
 		35E5E47E1A17191600E9A6DD /* PingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E5E4831A17191600E9A6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E5E4841A17191600E9A6DD /* PingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTests.swift; sourceTree = "<group>"; };
-		DF29FCB91A1723C00071B43A /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMessaging.framework; path = "../Downloads/azuresdk-iOS-v1.2.4/WindowsAzureMessaging.framework"; sourceTree = "<group>"; };
-		DF29FCBA1A1723C00071B43A /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMobileServices.framework; path = "../Downloads/azuresdk-iOS-v1.2.4/WindowsAzureMobileServices.framework"; sourceTree = "<group>"; };
-		DF77E10C1A172B0900948ED6 /* Ping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ping-Bridging-Header.h"; sourceTree = "<group>"; };
-		DF77E10D1A17307900948ED6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,15 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				35CCECBA1A17378F00D8DFFC /* CoreLocation.framework in Frameworks */,
 				35CCECB81A17376800D8DFFC /* AddressBookUI.framework in Frameworks */,
 				35CCECB61A17376200D8DFFC /* AddressBook.framework in Frameworks */,
-=======
-				DF77E10E1A17307900948ED6 /* CoreLocation.framework in Frameworks */,
-				DF29FCBB1A1723C00071B43A /* WindowsAzureMessaging.framework in Frameworks */,
-				DF29FCBC1A1723C00071B43A /* WindowsAzureMobileServices.framework in Frameworks */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,15 +66,9 @@
 		35E5E4601A17191600E9A6DD = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				35CCECB91A17378F00D8DFFC /* CoreLocation.framework */,
 				35CCECB71A17376800D8DFFC /* AddressBookUI.framework */,
 				35CCECB51A17376200D8DFFC /* AddressBook.framework */,
-=======
-				DF77E10D1A17307900948ED6 /* CoreLocation.framework */,
-				DF29FCB91A1723C00071B43A /* WindowsAzureMessaging.framework */,
-				DF29FCBA1A1723C00071B43A /* WindowsAzureMobileServices.framework */,
->>>>>>> Stashed changes
 				35E5E46B1A17191600E9A6DD /* Ping */,
 				35E5E4811A17191600E9A6DD /* PingTests */,
 				35E5E46A1A17191600E9A6DD /* Products */,
@@ -111,7 +92,6 @@
 				35E5E4751A17191600E9A6DD /* Images.xcassets */,
 				35E5E4771A17191600E9A6DD /* LaunchScreen.xib */,
 				35E5E46C1A17191600E9A6DD /* Supporting Files */,
-				DF77E10C1A172B0900948ED6 /* Ping-Bridging-Header.h */,
 			);
 			path = Ping;
 			sourceTree = "<group>";
@@ -357,10 +337,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/brian_jo/Downloads/azuresdk-iOS-v1.2.4",
-				);
 				INFOPLIST_FILE = Ping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,10 +347,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/brian_jo/Downloads/azuresdk-iOS-v1.2.4",
-				);
 				INFOPLIST_FILE = Ping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
