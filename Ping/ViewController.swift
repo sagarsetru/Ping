@@ -12,6 +12,8 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
+    var records = [NSDictionary]()
+    var table : MSTable?
 
     @IBOutlet var addButton: UIBarButtonItem?
     
@@ -21,6 +23,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        
+        self.table = client.tableWithName("Users")!
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func addNewContact(sender: UIBarButtonItem){
         
         println("Added Person")
+        self.saveItem("ad hoc")
         //This is where we would add a person!
     }
     
@@ -53,6 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
                 self.displayLocationInfo(pm)
+                self.saveItem("ad hoc")
             } else {
                 println("Problem with the data received from geocoder")
             }
@@ -92,7 +99,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         println("Second Button Pushed!")
     }
     
-    
+    func saveItem(text: String)
+    {
+        if text.isEmpty {
+            return
+        }
+        
+        let itemToInsert = ["phonenumber": 5102932929, "name": text]
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        self.table!.insert(itemToInsert) {
+            (item, error) in
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            if error != nil {
+                println("Error: " + error.description)
+            } else {
+                self.records.append(item)
+            }
+        }
+    }
     
     
 }

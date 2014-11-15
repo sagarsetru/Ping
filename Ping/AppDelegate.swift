@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window!.rootViewController = navController // force unwrap the UIWindow optional here because we know there's an actual value stored here (as oppose to nil)
 //        window!.makeKeyAndVisible() // make window visible and the 'key' window (being the key window means that this window will gather all interaction data)
 //        
+        
         var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
         
         var deviceTokenString: String = ( deviceToken.description as NSString )
