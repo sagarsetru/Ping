@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import AddressBook
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -17,6 +18,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var mapView: MKMapView?
 
     @IBOutlet var addButton: UIBarButtonItem?
+    
+    @IBOutlet var mapButton: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         println("Added Person")
         //This is where we would add a person!
+    }
+    
+    @IBAction func displayMap(sender: UIBarButtonItem){
+        println("Move to new screen")
+        
     }
     
     @IBAction func findMyLocation(sender: AnyObject) {

@@ -54,16 +54,48 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Jrh-Mu-Bam"/>
                         <barButtonItem title="Me " id="44M-Fo-lem"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Rl7-j2-Ohq"/>
+                        <barButtonItem title="Map" id="SxX-CJ-CYM">
+                            <connections>
+                                <action selector="displayMap:" destination="q0y-Fc-oix" id="HL2-pX-fsk"/>
+                                <segue destination="3cu-pu-x53" kind="push" id="wus-ar-X0k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wjM-lH-i1e"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="3hL-jN-wg2"/>
                     <connections>
                         <outlet property="addButton" destination="UBV-1P-FbA" id="2LA-9Q-oUH"/>
+                        <outlet property="mapButton" destination="SxX-CJ-CYM" id="LLD-mx-eEX"/>
                         <outlet property="mapView" destination="NBK-0n-4RB" id="SN8-Nb-7CU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyk-zC-8Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189" y="195"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Yb-2J-154">
+            <objects>
+                <viewController id="3cu-pu-x53" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNF-pF-ZIf"/>
+                        <viewControllerLayoutGuide type="bottom" id="e5V-VK-or1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uVm-wD-HNN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Hm-4vH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lWd-0K-dHW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5t-LO-l8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="195"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
