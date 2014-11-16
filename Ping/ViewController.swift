@@ -15,7 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var records = [NSDictionary]()
     var table : MSTable?
     var client : MSClient?
-
+    
     @IBOutlet var addButton: UIBarButtonItem?
     
     @IBOutlet var GPSButton: UIButton?
@@ -26,15 +26,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         setTable("Users")
         
-//        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
-//        self.table = client.tableWithName("Users")!
+        //        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        //        self.table = client.tableWithName("Users")!
     }
     
     func setTable(tableName : String) {
         let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
         self.table = client.tableWithName(tableName)!
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -97,11 +97,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         println("Error while updating location " + error.localizedDescription)
         
     }
-
+    
     func firstButtonPush()
     {
-    println("First Button Pushed!")
-    
+        println("First Button Pushed!")
+        
     }
     
     func secondButtonPush()
