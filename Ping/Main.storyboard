@@ -48,7 +48,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="3b8-VG-MgI"/>
                         <barButtonItem systemItem="add" id="UBV-1P-FbA">
                             <connections>
-                                <action selector="addNewContact:" destination="q0y-Fc-oix" id="96T-UN-qQk"/>
+                                <action selector="performPickPerson:" destination="q0y-Fc-oix" id="HXu-tM-NY2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Jrh-Mu-Bam"/>
