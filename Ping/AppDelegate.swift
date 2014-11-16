@@ -15,14 +15,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var client: MSClient?
     
-    var deviceToken: NSString?
-
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData)
-    {
+    var deviceToken: NSData?
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-//        self.client = MSClient(clientWithApplicationURLString:"https://pingping.azure-mobile.net/", applicationKey:"ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
         self.client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        
+        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
 //        
+//        var deviceTokenString: String = ( deviceToken as NSString )
+//            .stringByTrimmingCharactersInSet( characterSet )
+//            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+//        
+//        println( deviceTokenString )
+        
+        let notificationTypes:UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let notificationSettings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
+        
+        return true
+        
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        
+        
+        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+        
+        var deviceTokenString: String = ( deviceToken.description as NSString )
+                    .stringByTrimmingCharactersInSet( characterSet )
+                    .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+        
+        println( deviceTokenString )
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        println(error.localizedDescription)
+        NSLog("Failed to Register ", error)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    
+    }
+
+//
+//    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData)
+//    {
+//        
+//        self.client = MSClient(clientWithApplicationURLString:"https://pingping.azure-mobile.net/", applicationKey:"ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+//        self.client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+//
 //        window = UIWindow(frame: UIScreen.mainScreen().bounds)
 //        
 //        let rootVC = ViewController()
@@ -32,19 +82,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window!.makeKeyAndVisible() // make window visible and the 'key' window (being the key window means that this window will gather all interaction data)
 //        
         
-        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
-        
-        var deviceTokenString: String = ( deviceToken.description as NSString )
-            .stringByTrimmingCharactersInSet( characterSet )
-            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
-        
-        println( deviceTokenString )
-        
-    }
-    
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        NSLog("Failed to Register ", error)
-        self.deviceToken = "";
-    }
+//        var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+//        
+//        var deviceTokenString: String = ( deviceToken.description as NSString )
+//            .stringByTrimmingCharactersInSet( characterSet )
+//            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+//        
+//        println( deviceTokenString )
+//        
+//    }
 }
 

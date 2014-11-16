@@ -14,6 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var records = [NSDictionary]()
     var table : MSTable?
+    var client : MSClient?
 
     @IBOutlet var addButton: UIBarButtonItem?
     
@@ -23,9 +24,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        setTable("Users")
         
-        self.table = client.tableWithName("Users")!
+//        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+//        self.table = client.tableWithName("Users")!
+    }
+    
+    func setTable(tableName : String) {
+        let client = MSClient(applicationURLString: "https://pingping.azure-mobile.net/", applicationKey: "ntpryhnZVXSegSmfSxJqbITsiNvEDh92")
+        self.table = client.tableWithName(tableName)!
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +66,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
                 self.displayLocationInfo(pm)
-                self.saveItem("ad hoc")
+                
+                self.setTable("Requests")
+                self.saveLocationItem(pm)
+                
             } else {
                 println("Problem with the data received from geocoder")
             }
@@ -115,6 +125,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 println("Error: " + error.description)
             } else {
                 self.records.append(item)
+            }
+        }
+    }
+    
+    func saveLocationItem(placemark: CLPlacemark?) {
+        if let containsPlacemark = placemark {
+            //stop updating location to save battery life
+            locationManager.stopUpdatingLocation()
+            
+            let GPScoords = NSString(format: "%12.10f", containsPlacemark.location.coordinate.latitude) + ";" +
+                NSString(format: "%12.10f", containsPlacemark.location.coordinate.longitude)
+            
+            let itemToInsert = ["phonenumber": 5102932929, "name": GPScoords]
+            
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            self.table!.insert(itemToInsert) {
+                (item, error) in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                if error != nil {
+                    println("Error: " + error.description)
+                } else {
+                    self.records.append(item)
+                }
             }
         }
     }
